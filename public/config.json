@@ -1,6 +1,6 @@
 {
   "dataApiHostName": "apic-sandbox-scu-app-01.data.eastus.azure-apicenter.ms/workspaces/default",
-  "title": "API portal",
+  "title": "Elo API Portal",
   "authentication": {
       "clientId": "1f0e6511-d398-427a-800e-a8f48789b09c",
       "tenantId": "84965a39-4def-4d10-93e4-95b46248f44a",
