@@ -6,9 +6,9 @@ rules:
     severity: error
     given: $.paths[*]~
     then:
-	  function: casing
+      function: pattern
       functionOptions:
-        type: kebab
+        match: "^(\/|[a-z0-9-.]+|{[a-zA-Z0-9_]+})+$"
         
   rule-important-info-fields:
     description: Absolutely must have the info information
