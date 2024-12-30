@@ -1,5 +1,15 @@
 extends: spectral:oas
 rules:
+  paths-kebab-case:
+    description: Usar kebab-case na construção da URI para nome do projeto (domínio), api-name e resource-name.
+    message: "{{property}} deve ser kebab-case (letras minusculas e separadas por hífens)"
+    severity: error
+    given: $.paths[*]~
+    then:
+	  function: casing
+      functionOptions:
+        type: kebab
+        
   rule-important-info-fields:
     description: Absolutely must have the info information
     message: "Missing the {{property}}"
