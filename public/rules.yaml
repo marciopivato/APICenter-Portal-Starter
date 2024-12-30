@@ -7,7 +7,7 @@ rules:
     given: $.paths[*]~
     severity: error
     then:
-      field: name
+      #field: name
       function: casing
       functionOptions:
         type: kebab
