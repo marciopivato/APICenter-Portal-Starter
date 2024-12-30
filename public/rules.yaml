@@ -3,12 +3,14 @@ rules:
   paths-kebab-case:
     description: Usar kebab-case na construção da URI para nome do projeto (domínio), api-name e resource-name.
     message: "{{property}} deve ser kebab-case (letras minusculas e separadas por hífens)"
-    severity: error
+    type: style
     given: $.paths[*]~
+    severity: error
     then:
-      function: pattern
+      field: name
+      function: casing
       functionOptions:
-        match: "^(\/|[a-z0-9-.]+|{[a-zA-Z0-9_]+})+$"
+        type: kebab
         
   rule-important-info-fields:
     description: Absolutely must have the info information
